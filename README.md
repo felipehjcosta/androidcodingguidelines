@@ -31,20 +31,44 @@ Bad:
 
 Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
-int myVar
+Good:
+	int myVar;
+    
+Bad:
+	int my_var;
+    
 3. Constant Names
 
 Use all capital letters and use under bars ('_') as separators.
 
-final int MY_CONST = 1;
+Good:
+	final int MY_CONST = 1;
+    
+Bad:
+	final int myConst = 1;
+
+
 4. Method Names
 
 Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
-int myMethod()
+Good:
+	int myMethod();
+
+Bad:
+	int My_Method();
+
 5. Class Names
 
 Start with an upper-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
-public class MyClassName
+Good:
+	public class MyClassName
+
+Bad:
+	public class MyclassName_
+
+
+
+
 
