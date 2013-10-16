@@ -1,5 +1,4 @@
 # Android Coding Guidelines
-================
 
 This document contains the coding guidelines for the Android Development. It contains four major sections:
 
