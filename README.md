@@ -86,7 +86,7 @@ Start with an upper-case letter and use uppercase letters as separators. Do not 
 ```
 
 
-#### Curly Braces
+### Curly Braces
 
 A fervent issue of great debate in programming circles is placement of curly braces. The Java style is to place the initial brace on the same line as the keyword and the trailing brace on its own line but lined up with the keyword. For example:
 
@@ -119,7 +119,7 @@ while (condition)
 All if, while and do statements must either have braces or be on a single line. This helps to make sure someone adding a line of code does not forget to add braces.
 
 
-#### Whitespace
+### Whitespace
 
 Always layout your source code so that elements that are part of a group go together.
 
@@ -170,12 +170,53 @@ if (condition) {               // Comment
 }
 ```
 
+### Additions and Exceptions to the Javadoc Standards
+
+Most professional Java programmers follow these conventions even though they are not listed in the Code Conventions for the Java Programming Language.
+
+##### No Magic Numbers
+
+A magic number is a numeric literal that is not defined as a constant. It's magic because no one has a clue what it means after 3 months, including the author. From widespread use, -1, 0, 1, and 2 are not considered magic numbers.
+
+Whenever you assign a number to a variable, use a constant instead. In Java, you declare constants, which are variables that cannot change, using the keyword final. You may use local constants within methods or member constants declared outside of any method. Usually, you declare member constants as a public static final member variable.
+
+```
+public static final int MY_CONSTANT = 10;
+```
+
+Because of their special meaning, write constants in all upper case and use under bars ('_') as separators.
+
+##### Method Length
+
+Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks.
+
+##### Tab Character
+
+Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
 
 
+#### Additions and Exceptions to the Javadoc Standards
 
+Most professional Java programmers follow these conventions even though they are not listed in the Code Conventions for the Java Programming Language.
 
+##### No Magic Numbers
 
+A magic number is a numeric literal that is not defined as a constant. It's magic because no one has a clue what it means after 3 months, including the author. From widespread use, -1, 0, 1, and 2 are not considered magic numbers.
 
+Whenever you assign a number to a variable, use a constant instead. In Java, you declare constants, which are variables that cannot change, using the keyword final. You may use local constants within methods or member constants declared outside of any method. Usually, you declare member constants as a public static final member variable.
+
+public static final int MY_CONSTANT = 10;
+Because of their special meaning, write constants in all upper case and use under bars ('_') as separators.
+
+##### Method Length
+
+Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks.
+
+##### Tab Character
+
+Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
+
+#### Creating Javadoc
 
 
 
