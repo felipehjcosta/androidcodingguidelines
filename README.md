@@ -2,10 +2,10 @@
 
 This document contains the coding guidelines for the Android Development. It contains four major sections:
 
-- Style Guidelines, on how to organize your source code.
-- Git Workflow Changes, discusses how Git workflow works.
-- Source Code Control, details our source code control use.
-- Best Practices, used in the Android Development.
+- Style Guidelines.
+- Git Workflow Changes.
+- Source Code Control.
+- Best Practices.
 
 ## Style Guidelines
 
@@ -82,13 +82,13 @@ Start with an upper-case letter and use uppercase letters as separators. Do not 
 
 **Bad:**
 ```
-	public class MyclassName_
+	public class My_class_Name
 ```
 
 
 ### Curly Braces
 
-A fervent issue of great debate in programming circles is placement of curly braces. The Java style is to place the initial brace on the same line as the keyword and the trailing brace on its own line but lined up with the keyword. For example:
+The Java style is to place the initial brace on the same line as the keyword and the trailing brace on its own line but lined up with the keyword.
 
 **Good:**
 ```
@@ -118,7 +118,6 @@ while (condition)
 
 All if, while and do statements must either have braces or be on a single line. This helps to make sure someone adding a line of code does not forget to add braces.
 
-
 ### Whitespace
 
 Always layout your source code so that elements that are part of a group go together.
@@ -135,7 +134,7 @@ Limit your line length to 80 characters since longer lines may cause problems wi
 
 ##### Spacing Around Operators
 
-Always put spaces before and after binary operators. This improves the readability of expressions. For example:
+Always put spaces before and after binary operators. This improves the readability of expressions.
 
 ```
 int c = -a * b - d;
@@ -143,7 +142,8 @@ int c = -a * b - d;
 
 ##### Indentation
 
-Always indent within curly braces. Use four (4) spaces for each indentation level. For example:
+Always indent within curly braces. Use four (4) spaces for each indentation level. 
+
 ```
 void func() {
     if (something happened) {
@@ -158,7 +158,7 @@ void func() {
 
 ##### if-else-if-else
 
-Always line up if statements with the curly braces for their associated else statement. Specifically, place the initial brace on the same line as the keyword and the trailing brace inline on the same line as the next statement. For example:
+Always line up if statements with the curly braces for their associated else statement. Specifically, place the initial brace on the same line as the keyword and the trailing brace inline on the same line as the next statement.
 
 ```
 if (condition) {               // Comment
@@ -188,35 +188,82 @@ Because of their special meaning, write constants in all upper case and use unde
 
 ##### Method Length
 
-Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks.
+Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks. This is good for TEST!
 
 ##### Tab Character
 
 Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
 
 
-#### Additions and Exceptions to the Javadoc Standards
+### Comments
 
-Most professional Java programmers follow these conventions even though they are not listed in the Code Conventions for the Java Programming Language.
+Comments are explanatory notes for the humans reading a program. With good name choices, comments can be minimal in a program. The only required comments are block comments just before the class declaration (after any import statements) and just before each method declaration.
 
-##### No Magic Numbers
+Other than block comments, one other time to add comments is when your code is unusual or obscure. When something is important and not obvious, it merits a comment.
 
-A magic number is a numeric literal that is not defined as a constant. It's magic because no one has a clue what it means after 3 months, including the author. From widespread use, -1, 0, 1, and 2 are not considered magic numbers.
+#### Block Comments
 
-Whenever you assign a number to a variable, use a constant instead. In Java, you declare constants, which are variables that cannot change, using the keyword final. You may use local constants within methods or member constants declared outside of any method. Usually, you declare member constants as a public static final member variable.
+Javadoc is a program that examines the declarations and documentation comments of your code to produce a set of HTML pages. These pages describe your code to other programmers. For an example of the documentation produced, see the Java API documentation.
 
-public static final int MY_CONSTANT = 10;
-Because of their special meaning, write constants in all upper case and use under bars ('_') as separators.
+Some of the Javadoc is derived from specially-formatted block comments, which you create as follows:
 
-##### Method Length
+- Indent the first line to align with the code below the comment.
+- Start the comment with the begin-comment symbol (/**) followed by a return.
+- Start subsequent lines with an asterisk *. Indent the asterisks with an additional space so the asterisks line up. Separate the asterisk from the descriptive text or tag that follows it.
+- Add a description of the purpose of the class or method.
+- Insert a blank comment line between the description and the list of tags, as shown.
+- Insert additional blank lines to create various tags.
+- The last line begins with the end-comment symbol (*/) indented so the asterisks line up and followed by a return. Note that the end-comment symbol contains only a single asterisk.
 
-Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks.
+```
+/**
+ * The main method for the HelloWorld program.
+ *
+ * @param args Not used
+ */
+ ```
+ 
+#### File Comment Block
 
-##### Tab Character
+Every source code file (*.java) must have a Javadoc comment block just before the class declaration containing the course number, assignment number, name of the file and purpose of the file. One or two lines is usually sufficient to explain the purpose. In addition, you must add the author tag containing your name and the version tag containing the date the assignment is due. For example:
 
-Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
+```
+import javax.swing.*;
 
-#### Creating Javadoc
+/**
+ * CS-12J Asn 3
+ * HelloWorld.java
+ * Purpose: Prints a message to the screen.
+ *
+ * @author Jane User
+ * @version 1.0 8/20/03
+ */
+public class HellowWorld {
+```
+
+The following tags must be used always:
+
+@author
+@version
+
+#### Method Comment Block
+
+Every method must have a Javadoc comment block before the method. For example:
+
+```
+/**
+ * Read a line of text from the shell console.
+ *
+ * @return A String input by the user.
+ */
+The first line is a description of how to use the method.
+```
+
+Where appropriate, the following tags must be used:
+
+@param
+@return
+@throws
 
 
 
