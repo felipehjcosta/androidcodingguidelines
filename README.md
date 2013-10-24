@@ -9,7 +9,7 @@ This document contains the coding guidelines for the Android Development. It con
 
 ## Style Guidelines
 
-In order to keep the code consistent, please use the following conventions. From here on `good' and `bad' are used to attribute things that would make the coding style match, or not match. It is not a judgment call on your coding abilities, but more of a style and look call. Please try to follow these guidelines to ensure prettiness.
+In order to keep the code consistent, please use the following conventions. From here on 'good' and 'bad' are used to attribute things that would make the coding style match, or not match. It is not a judgment call on your coding abilities, but more of a style and look call. Please try to follow these guidelines to ensure prettiness.
 
 You may also wish to read the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html) as well, however the Android guidelines below take precedent for Java code if there is a conflict.
 
@@ -26,7 +26,7 @@ int count;
     
 **Bad:**
 ```java
-int i;
+int a;
 ```
 
 #### Variable Names
