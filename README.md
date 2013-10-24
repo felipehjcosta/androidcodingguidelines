@@ -20,12 +20,12 @@ You may also wish to read the [Code Conventions for the Java Programming Languag
 Choose names that suggest their purpose. Good names help you understand the problem you are solving.
 
 **Good:**
-```
+```java
 int count;
 ```
     
 **Bad:**
-```
+```java
 int i;
 ```
 
@@ -34,12 +34,12 @@ int i;
 Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
 **Good:**
-```
+```java
 int myVar;
 ```
 
 **Bad:**
-```
+``` java
 int my_var;
 ```
 
@@ -48,12 +48,12 @@ int my_var;
 Use all capital letters and use under bars ('_') as separators.
 
 **Good:**
-```
+```java
 final int MY_CONST = 1;
 ```
     
 **Bad:**
-```
+```java
 final int myConst = 1;
 ```
 
@@ -62,12 +62,12 @@ final int myConst = 1;
 Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
 **Good:**
-```
+```java
 int myMethod();
 ```
 
 **Bad:**
-```
+```java
 int My_Method();
 ```
 
@@ -76,13 +76,13 @@ int My_Method();
 Start with an upper-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
 **Good:**
-```
-	public class MyClassName
+```java
+public class MyClassName
 ```
 
 **Bad:**
-```
-	public class My_class_Name
+```java
+public class My_class_Name
 ```
 
 
@@ -91,7 +91,7 @@ Start with an upper-case letter and use uppercase letters as separators. Do not 
 The Java style is to place the initial brace on the same line as the keyword and the trailing brace on its own line but lined up with the keyword.
 
 **Good:**
-```
+```java
 if (condition) {
     ...
 }
@@ -102,7 +102,7 @@ while (condition) {
 ```
 
 **Bad:**
-```
+```java
 if (condition) 
 {
     ...
@@ -136,7 +136,7 @@ Limit your line length to 80 characters since longer lines may cause problems wi
 
 Always put spaces before and after binary operators. This improves the readability of expressions.
 
-```
+```java
 int c = -a * b - d;
 ```
 
@@ -144,8 +144,8 @@ int c = -a * b - d;
 
 Always indent within curly braces. Use four (4) spaces for each indentation level. 
 
-```
-void func() {
+```java
+void function() {
     if (something happened) {
         if (another thing happened) {
             while (more input) {
@@ -160,7 +160,7 @@ void func() {
 
 Always line up if statements with the curly braces for their associated else statement. Specifically, place the initial brace on the same line as the keyword and the trailing brace inline on the same line as the next statement.
 
-```
+```java
 if (condition) {               // Comment
     ...
 } else if (condition) {        // Comment
@@ -180,7 +180,7 @@ A magic number is a numeric literal that is not defined as a constant. It's magi
 
 Whenever you assign a number to a variable, use a constant instead. In Java, you declare constants, which are variables that cannot change, using the keyword final. You may use local constants within methods or member constants declared outside of any method. Usually, you declare member constants as a public static final member variable.
 
-```
+```java
 public static final int MY_CONSTANT = 10;
 ```
 
@@ -215,7 +215,7 @@ Some of the Javadoc is derived from specially-formatted block comments, which yo
 - Insert additional blank lines to create various tags.
 - The last line begins with the end-comment symbol (*/) indented so the asterisks line up and followed by a return. Note that the end-comment symbol contains only a single asterisk.
 
-```
+```java
 /**
  * The main method for the HelloWorld program.
  *
@@ -227,7 +227,7 @@ Some of the Javadoc is derived from specially-formatted block comments, which yo
 
 Every source code file (*.java) must have a Javadoc comment block just before the class declaration containing the course number, assignment number, name of the file and purpose of the file. One or two lines is usually sufficient to explain the purpose. In addition, you must add the author tag containing your name and the version tag containing the date the assignment is due. For example:
 
-```
+```java
 import javax.swing.*;
 
 /**
@@ -250,7 +250,7 @@ The following tags must be used always:
 
 Every method must have a Javadoc comment block before the method. For example:
 
-```
+```java
 /**
  * Read a line of text from the shell console.
  *
@@ -264,6 +264,31 @@ Where appropriate, the following tags must be used:
 @param
 @return
 @throws
+
+## Best Practices
+
+### XML
+
+####  Widgets 
+
+String identifiers in strings.xml: use all lower case, separated by underscores.
+
+```xml
+<string name="btn_pause">pause</string>
+```
+
+IDs from layout xml files: Same as string identifiers from strings.xml.
+
+```xml
+<Button
+android:id="@+id/pause_button"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/btn_pause"/>
+```
+
+
+### Java Code
 
 
 
