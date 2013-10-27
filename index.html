@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap, from LayoutIt!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>
+					<span>Android Coding Guidelines</span>
+				</h1>
+			</div>
+			<p>
+				This document contains the coding guidelines for the Android Development. It contains four major sections:
+			</p>
+			<ul>
+				<li>
+					- Style Guidelines.
+				</li>
+				<li>
+					Git Workflow Changes.
+				</li>
+				<li>
+					Source Code Control.
+				</li>
+				<li>
+					Best Practices.
+				</li>
+			</ul>
+			<h2>
+				Style Guidelines
+			</h2>
+			
+			<div>
+				In order to keep the code consistent, please use the following conventions. From here on 'good' and 'bad' are used to attribute things that would make the coding style match, or not match. It is not a judgment call on your coding abilities, but more of a style and look call. Please try to follow these guidelines to ensure prettiness.
+			</div>
+			
+			<div>
+				You may also wish to read the [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/codeconv-138413.html) as well, however the Android guidelines below take precedent for Java code if there is a conflict.
+			</div>
+			
+
+<!-- Naming Conventions -->
+			<h3>
+				Naming Conventions
+			</h3>
+
+	<!-- Use Meaningful Names-->
+
+				<dl>
+					<dt>
+						Use Meaningful Names
+					</dt>
+					<dd>
+						Choose names that suggest their purpose. Good names help you understand the problem you are solving.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+int count;
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+int a;
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Variable Names-->
+
+				<dl>
+					<dt>
+						Variable Names
+					</dt>
+					<dd>
+						Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+int myVar;
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+int my_var;
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Constant Names-->
+
+				<dl>
+					<dt>
+						Constant Names
+					</dt>
+					<dd>
+						Use all capital letters and use under bars ('_') as separators.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+final int MY_CONST = 1;
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+final int myConst = 1;
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Method Names -->
+
+				<dl>
+					<dt>
+						Method Names
+					</dt>
+					<dd>
+						Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+int myMethod();
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+int My_Method();
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Class Names -->
+
+				<dl>
+					<dt>
+						Class Names
+					</dt>
+					<dd>
+						Start with an upper-case letter and use uppercase letters as separators. Do not use under bars ('_').
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+public class MyClassName
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+public class My_class_Name
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+<!-- -->
+
+<!-- Curly Bracess -->
+			<h3>
+				Curly Bracess 
+			</h3>
+
+
+	<!-- Convetion -->
+				<dl>
+					<dt>
+						Convetion
+					</dt>
+					<dd>
+						A fervent issue of great debate in programming circles is placement of curly braces. The Java style is to place the initial brace on the same line as the keyword and the trailing brace on its own line but lined up with the keyword. For example:
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+if (condition) {
+...
+}
+
+while (condition) {
+...
+}
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+if (condition) 
+{
+...
+}
+
+while (condition) 
+{
+...
+}
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Convetion -->
+				<dl>
+					<dt>
+						When Braces are Needed
+					</dt>
+					<dd>
+						All if, while and do statements must either have braces or be on a single line. This helps to make sure someone adding a line of code does not forget to add braces.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+<!-- -->
+
+
+<!-- Whitespace -->
+			<h3>
+				Whitespace
+			</h3>
+
+	<!-- No Tab Character -->
+				<dl>
+					<dt>
+						No Tab Character
+					</dt>
+					<dd>
+						Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
+
+						The easy way to remove tabs is to set your text editor to substitute the correct number of spaces for a tab character. See the instructions for both jEdit and TextPad for setting up these editors. For other editors, you will need to search for the setting.
+	
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Line Length -->
+				<dl>
+					<dt>
+						Line Length
+					</dt>
+					<dd>
+						Limit your line length to 80 characters since longer lines may cause problems with many text editors and other tools.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Spacing Around Operators -->
+				<dl>
+					<dt>
+						Spacing Around Operators 
+					</dt>
+					<dd>
+						Always put spaces before and after binary operators. This improves the readability of expressions.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+int c = -a * b - d;
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+int c =-a*b-d;
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Indentation -->
+				<dl>
+					<dt>
+						Indentation
+					</dt>
+					<dd>
+						Always indent within curly braces. Use four (4) spaces for each indentation level.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+void func() {
+	if (something happened) {
+		if (another thing happened) {
+			while (more input) {
+			...
+			}
+		}
+	}
+}
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+void func() {
+if (something happened) {
+	if (another thing happened) {
+	while (more input) {
+	...
+	}
+	}
+}
+}
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- if-else-if-else -->
+				<dl>
+					<dt>
+						if-else-if-else
+					</dt>
+					<dd>
+						Always line up if statements with the curly braces for their associated else statement. Specifically, place the initial brace on the same line as the keyword and the trailing brace inline on the same line as the next statement.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+if (condition) {               
+...
+} else if (condition) {    
+...
+} else {                      
+...
+}
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+if (condition) 
+{               
+...
+} 
+else if (condition) 
+{    
+...
+} 
+else 
+{                      
+...
+}
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+<!-- -->
+
+
+<!-- Whitespace -->
+			<h3>
+				Additions and Exceptions to the Javadoc Standards 
+			</h3>
+
+	<!-- No Magic Numbers -->
+				<dl>
+					<dt>
+						No Magic Numbers
+					</dt>
+					<dd>
+						A magic number is a numeric literal that is not defined as a constant. It's magic because no one has a clue what it means after 3 months, including the author. From widespread use, -1, 0, 1, and 2 are not considered magic numbers.
+
+						Whenever you assign a number to a variable, use a constant instead. In Java, you declare constants, which are variables that cannot change, using the keyword final. You may use local constants within methods or member constants declared outside of any method. Usually, you declare member constants as a public static final member variable.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+public static final int MY_CONSTANT = 10;
+...
+calculate(MY_CONSTANT);
+</pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+<pre class="highlight">
+calculate(10);
+</pre>
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Method Length -->
+				<dl>
+					<dt>
+						Method Length
+					</dt>
+					<dd>
+						Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Tab Character -->
+				<dl>
+					<dt>
+						Tab Character
+					</dt>
+					<dd>
+						Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+<!-- -->
+
+
+<!-- Whitespace -->
+			<h3>
+				Comments
+			</h3>
+			<p>
+				Comments are explanatory notes for the humans reading a program. With good name choices, comments can be minimal in a program. The only required comments are block comments just before the class declaration (after any import statements) and just before each method declaration.
+
+				Other than block comments, one other time to add comments is when your code is unusual or obscure. When something is important and not obvious, it merits a comment.
+			</p>
+
+	<!-- No Magic Numbers -->
+				<dl>
+					<dt>
+						Block Comments
+					</dt>
+					<dd>
+						Javadoc is a program that examines the declarations and documentation comments of your code to produce a set of HTML pages. These pages describe your code to other programmers. For an example of the documentation produced, see the Java API documentation.
+
+						Some of the Javadoc is derived from specially-formatted block comments, which you create as follows:
+					</dd>
+				</dl>
+				<ul>
+					<li>
+						Indent the first line to align with the code below the comment.
+					</li>
+					<li>
+						Start the comment with the begin-comment symbol (/**) followed by a return.
+					</li>
+					<li>
+						Start subsequent lines with an asterisk *. Indent the asterisks with an additional space so the asterisks line up. Separate the asterisk from the descriptive text or tag that follows it
+					</li>
+					<li>
+						Add a description of the purpose of the class or method.
+					</li>
+					<li>
+						Insert a blank comment line between the description and the list of tags, as shown.
+					</li>
+					<li>
+						Insert additional blank lines to create various tags.
+					</li>
+					<li>
+						The last line begins with the end-comment symbol (*/) indented so the asterisks line up and followed by a return. Note that the end-comment symbol contains only a single asterisk.
+<pre class="highlight">
+/**
+ * The main method for the HelloWorld program.
+ *
+ * @param args Not used
+ */
+</pre>
+					</li>
+					<li>
+						For more information on the tags, see the JAVADOC TAGS
+					</li>
+				</ul>
+	<!-- -->
+
+	<!-- File Comment Block -->
+				<dl>
+					<dt>
+						File Comment Block
+					</dt>
+					<dd>
+						Every source code file (*.java) must have a Javadoc comment block just before the class declaration containing the course number, assignment number, name of the file and purpose of the file. One or two lines is usually sufficient to explain the purpose. In addition, you must add the author tag containing your name and the version tag containing the date the assignment is due.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+import javax.swing.*;
+
+/**
+ * CS-12J Asn 3
+ * HelloWorld.java
+ * Purpose: Prints a message to the screen.
+ *
+ * @author Jane User
+ * @version 1.0 8/20/03
+ */
+public class HellowWorld {
+The following tags must be used always:
+</pre>
+
+								@author @version
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+	<!-- Method Comment Block -->
+				<dl>
+					<dt>
+						Method Comment Block
+					</dt>
+					<dd>
+						Every method must have a Javadoc comment block before the method.
+					</dd>
+				</dl>
+				<div class="row-fluid">
+					<div class="span6">
+						<dl>
+							<dt>
+								Good:
+							</dt>
+							<dd>
+<pre class="highlight">
+/**
+ * Read a line of text from the shell console.
+ *
+ * @return A String input by the user.
+ */
+The first line is a description of how to use the method.
+</pre>
+
+								Where appropriate, the following tags must be used:
+
+								@param @return @throws
+							</dd>
+						</dl>
+					</div>
+					<div class="span6">
+						<dl>
+							<dt>
+								Bad:
+							</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+				</div>
+	<!-- -->
+
+<!-- -->
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
