@@ -1,1 +1,32 @@
-@import url("bootstrap-responsive.min.css");
+@import url("bootstrap-flat.min.css");
+
+
+ul.sub-list {
+    padding: 0;
+    margin: 0 0 9px 15px;
+}
+
+div.introduction {
+	padding: 0;
+    margin: 9px 0 9px 0;
+}
+
+div.main {
+	margin: 0 auto;
+ 	float: none;
+}
+
+div.header {
+	/* background: #1f2c39 */
+}
+
+div.header h1 {
+	/* color: #fff */
+}
+
+div.header img {
+/*	float: left;
+	width:  0px;
+	height: 50px;
+	margin: 5px;*/
+}

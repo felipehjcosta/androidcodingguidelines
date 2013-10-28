@@ -13,8 +13,8 @@
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 	
 	<link href="css/highlighter/tomorrow-night-bright.css" rel="stylesheet" />
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/bootstrap-flat.min.css" rel="stylesheet">
+<!-- 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet"> -->
 	<link href="css/style.css" rel="stylesheet">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -37,13 +37,13 @@
 </head>
 
 <body>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span8 hidden-phone"></div>
-		<div class="span8">
-			<div class="page-header">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 hidden-phone"></div>
+		<div class="col-sm-8 main" >
+			<div class="page-header header">
 				<h1>
-					<span>Android Coding Guidelines</span>
+					<span><b>Android Coding Guidelines</b></span>
 				</h1>
 			</div>
 			<p>
@@ -63,19 +63,23 @@
 					Best Practices.
 				</li>
 			</ul>
-			<h2>
-				Style Guidelines
-			</h2>
-			
-			<div>
-				In order to keep the code consistent, please use the following conventions. From here on 'good' and 'bad' are used to attribute things that would make the coding style match, or not match. It is not a judgment call on your coding abilities, but more of a style and look call. Please try to follow these guidelines to ensure prettiness.
-			</div>
-			
-			<div>
-				You may also wish to read the <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Code Conventions for the Java Programming Language</a> as well, however the Android guidelines below take precedent for Java code if there is a conflict.
+
+			<div class="introduction">
+				<h2>
+					Style Guidelines
+				</h2>
+				
+				<div>
+					In order to keep the code consistent, please use the following conventions. From here on 'good' and 'bad' are used to attribute things that would make the coding style match, or not match. It is not a judgment call on your coding abilities, but more of a style and look call. Please try to follow these guidelines to ensure prettiness.
+				</div>
+				
+				<div>
+					You may also wish to read the <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Code Conventions for the Java Programming Language</a> as well, however the Android guidelines below take precedent for Java code if there is a conflict.
+				</div>
+
 			</div>
 
-			<ol>
+			<ul class="list-unstyled sub-list">
 				<li>
 
 	<!-- 1.  Naming Conventions -->
@@ -97,8 +101,8 @@
 						<dd>
 							Choose names that suggest their purpose. Good names help you understand the problem you are solving.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -110,7 +114,7 @@ int count;
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -140,28 +144,28 @@ int a;
 						<dd>
 							Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
 										</dt>
 										<dd>
-<pre class="prettyprint">
-int myVar;
-</pre>
+											<div class="alert alert-success">
+												int myVar;
+											</div>
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
 										</dt>
 										<dd>
-<pre class="prettyprint">
-int my_var;
-</pre>
+											<div class="alert alert-danger">
+												int my_var;
+											</div>
 										</dd>
 									</dl>
 								</div>
@@ -182,8 +186,8 @@ int my_var;
 						</dt>
 						<dd>
 							Use all capital letters and use under bars ('_') as separators.
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -195,7 +199,7 @@ final int MY_CONST = 1;
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -226,8 +230,8 @@ final int myConst = 1;
 						<dd>
 							Start with a lower-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -239,7 +243,7 @@ int myMethod();
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -268,8 +272,8 @@ int My_Method();
 						<dd>
 							Start with an upper-case letter and use uppercase letters as separators. Do not use under bars ('_').
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -281,7 +285,7 @@ public class MyClassName
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -300,13 +304,19 @@ public class My_class_Name
 
 		<!-- -->
 					</li>
-					<li>
+				</ol>
 	<!-- -->
+				</li>
+				<li>
 
 	<!-- Curly Bracess -->
 				<h3>
 					Curly Bracess 
 				</h3>
+
+				<ol>
+
+					<li>
 
 
 		<!-- Convetion -->
@@ -317,8 +327,8 @@ public class My_class_Name
 						<dd>
 							A fervent issue of great debate in programming circles is placement of curly braces. The Java style is to place the initial brace on the same line as the keyword and the trailing brace on its own line but lined up with the keyword. For example:
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -336,7 +346,7 @@ while (condition) {
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -373,8 +383,8 @@ while (condition)
 						<dd>
 							All if, while and do statements must either have braces or be on a single line. This helps to make sure someone adding a line of code does not forget to add braces.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -384,7 +394,7 @@ while (condition)
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -422,8 +432,8 @@ while (condition)
 
 							The easy way to remove tabs is to set your text editor to substitute the correct number of spaces for a tab character. See the instructions for both jEdit and TextPad for setting up these editors. For other editors, you will need to search for the setting.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -433,7 +443,7 @@ while (condition)
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -457,8 +467,8 @@ while (condition)
 						<dd>
 							Limit your line length to 80 characters since longer lines may cause problems with many text editors and other tools.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -468,7 +478,7 @@ while (condition)
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -492,8 +502,8 @@ while (condition)
 						<dd>
 							Always put spaces before and after binary operators. This improves the readability of expressions.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -505,7 +515,7 @@ int c = -a * b - d;
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -532,8 +542,8 @@ int c =-a*b-d;
 							Always indent within curly braces. Use four (4) spaces for each indentation level.
 
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -553,7 +563,7 @@ void func() {
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -588,8 +598,8 @@ if (something happened) {
 						<dd>
 							Always line up if statements with the curly braces for their associated else statement. Specifically, place the initial brace on the same line as the keyword and the trailing brace inline on the same line as the next statement.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -607,7 +617,7 @@ if (condition) {
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -657,8 +667,8 @@ else
 							Whenever you assign a number to a variable, use a constant instead. In Java, you declare constants, which are variables that cannot change, using the keyword final. You may use local constants within methods or member constants declared outside of any method. Usually, you declare member constants as a public static final member variable.
 
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -672,7 +682,7 @@ calculate(MY_CONSTANT);
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -698,8 +708,8 @@ calculate(10);
 						<dd>
 							Methods must be no more than 150 lines long. If a method becomes very long it is hard to understand. Instead, you should create smaller methods that focus on individual tasks.
 
-						<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -709,7 +719,7 @@ calculate(10);
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -734,8 +744,8 @@ calculate(10);
 						<dd>
 							Do not have any tab characters in your source code. It is difficult to impossible to read source code if your tab settings are different than the authors.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -745,7 +755,7 @@ calculate(10);
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -830,8 +840,8 @@ calculate(10);
 						<dd>
 							Every source code file (*.java) must have a Javadoc comment block just before the class declaration containing the course number, assignment number, name of the file and purpose of the file. One or two lines is usually sufficient to explain the purpose. In addition, you must add the author tag containing your name and the version tag containing the date the assignment is due.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -856,7 +866,7 @@ The following tags must be used always:
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -882,8 +892,8 @@ The following tags must be used always:
 						<dd>
 							Every method must have a Javadoc comment block before the method.
 
-							<div class="row-fluid">
-								<div class="span6">
+							<div class="row">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Good:
@@ -904,7 +914,7 @@ The first line is a description of how to use the method.
 										</dd>
 									</dl>
 								</div>
-								<div class="span6">
+								<div class="col-sm-6">
 									<dl>
 										<dt>
 											Bad:
@@ -925,14 +935,16 @@ The first line is a description of how to use the method.
 
 				</li>
 
-			</ol>
+			</ul>
 
 			<hr>
 			<div class="footer">
-			<p>&copy; 2013</p>
+			<ul class="list-unstyled">
+				<li class="pull-right"><a href="#top">Back to top</a></li>
+				<li><p>&copy; 2013</p></li>
 			</div>
 
-		<div class="span8 hidden-phone"></div>
+		<div class="col-sm-8 hidden-phone"></div>
 		</div>
 
 	</div>
