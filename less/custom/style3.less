@@ -1,0 +1,25 @@
+@import '../variables.less';
+@import '../mixins.less';
+@import '../type.less';
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: @gray-lighter;
+  padding-top: 40px;
+  @media screen and (max-width: 768px) {
+      body { padding-top: 0px; }
+  }
+}
+
+.jumbotron-list {
+	//margin-left: 10px;
+}
+
+.jumbotron{
+    background-color: #D7DBDC; //#DCDCDC; //#B4B7B8;
+}
+
+hr {
+	border-color: @navbar-default-color;
+}

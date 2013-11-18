@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Android Coding Guidelines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link type="text/css" rel="stylesheet" href="css/highlighter/tomorrow-night-bright.css" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap-flat.min.css" >
+	<!-- <link type="text/css" rel="stylesheet/less" href="less/bootstrap.less" media="all" /> -->
+	<!-- <link type="text/css" rel="stylesheet/less" href="less/custom/style.less" media="all" /> -->
+<!-- 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet"> -->
+	<link type="text/css" rel="stylesheet" href="css/style2.css" >
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="img/favicon.png">
+  
+
+	
+	<!-- <script type="text/javascript" src="js/less-1.3.3.min.js"></script> -->
+</head>
+
+<body>
+<div class="conatiner">
+	<div class="row">
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="./index.html">Android Guidelines</a>
+				</div>
+				<div class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		            <li class="active"><a href="#">Code Style</a></li>
+		            <li><a href="#">Git</a></li>
+		            <li><a href="#">Gradle</a></li>
+		            <li><a href="#">Testes</a></li>
+		            <li><a href="#">Boas Práticas</a></li>
+		          </ul>
+		          <ul class="nav navbar-nav navbar-right">
+		            <li><a href="#top">Back to top</a></li>
+		          </ul>
+		        </div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+
+        <div class="col-sm-2" id="menu">
+        </div>
+
+		<div class="col-sm-8 main" role="main">
+			<div class="introduction">
+				<h1>
+					<b>Orientações de Estilo</b>
+				</h1>
+
+				<!-- <hr> -->
+				
+				<div>
+					A fim de manter o código consistente, utilize as seguintes convenções. De agora em diante "bom" e "mau" são usados ​​para atribuir coisas que fariam o estilo de código corresponder, ou não. Isto não é um julgamento sobre suas habilidades de codificação, porém é mais uma chamada de estilo e aparência. Por favor, tente seguir estas orientações para garantir a clareza.
+				</div>
+				
+				<div>
+					Você também pode querer ler o <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html"> Convenção de Código para Linguagem Java</a> também, no entanto, as diretrizes abaixo prevalecem para o código Java, se houver um conflito.
+				</div>
+			</div>
+
+
+
+<!-- 1.  Naming Conventions -->
+
+			    <h2 class="page-header">
+			    	Convenções de Nomes
+			    </h2>
+				
+			<!-- 	<ol>
+					<li> -->
+
+<!-- Use Meaningful Names-->
+
+						<dl>
+							<dt>
+								Utilize Nomes Significativos
+							</dt>
+							<dd>
+								Escolha nomes que sugerem o seu propósito. Bons nomes ajudam o desenvolvedor a entender o problema que você está resolvendo.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int count;
+</pre>
+
+<pre class="prettyprint">
+List<News> newsList;
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int a;
+</pre>
+
+<pre class="prettyprint">
+List<News> someList;
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+<!-- -->
+
+					<!-- </li>
+					<li> -->
+			
+<!-- Variable Names-->
+
+						<dl>
+							<dt>
+								Nome de Variáveis
+							</dt>
+							<dd>
+								Comece com uma letra minúscula e use letras maiúsculas como separador. Não utilizar underscore ('_').
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int myVar;
+</pre>
+
+<pre class="prettyprint">
+int theInt = 1;
+</pre>
+
+<pre class="prettyprint">
+String someString = "Hello";
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int my_var;
+</pre>
+
+<pre class="prettyprint">
+int theint = 1;
+</pre>
+
+<pre class="prettyprint">
+String some_string = "Hello";
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+<!-- -->
+
+					<!-- </li>
+					<li> -->
+
+<!-- Constant Names-->
+
+						<dl>
+							<dt>
+								Nome de Constantes
+							</dt>
+							<dd>
+								Use todas as letras maiúsculas e utilize underscore ('_') como separador.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+final int MY_CONST = 1;
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+final int myConst = 1;
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+<!-- -->
+
+				<!-- 	</li>
+					<li> -->
+
+
+<!-- Method Names -->
+
+						<dl>
+							<dt>
+								Nom de Métodos
+							</dt>
+							<dd>
+								Comece com uma letra minúscula e use letras maiúsculas como separador. Não utilize underscore ('_').
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int myMethod();
+</pre>
+
+<pre class="prettyprint">
+void fooAndBar();
+</pre>
+
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int My_Method();
+</pre>
+
+<pre class="prettyprint">
+void foo_and_bar();
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+<!-- -->
+					<!-- </li>
+					<li> -->
+
+<!-- Class Names -->
+
+						<dl>
+							<dt>
+								Nome de Classes
+							</dt>
+							<dd>
+								Comece com uma letra maiúscula e utileze letras maiúsculas como separador. Não utilize underscore ('_').
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+public class MyClassName
+</pre>
+
+<pre class="prettyprint">
+class Example
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+public class My_class_Name
+</pre>
+
+<pre class="prettyprint">
+class example_
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+
+<!-- -->
+				<!-- 	</li>
+				</ol> -->
+
+
+
+
+<!-- Curly Bracess -->
+				<h2 class="page-header">
+					Chaves 
+				</h2>
+
+<!-- Convetion -->
+						<dl>
+							<dt>
+								Convenção
+							</dt>
+							<dd>
+								Uma questão fervoroso de grande debate nos círculos de programação é a colocação de chaves. O estilo Java é colocar a chave inicial na mesma linha que a palavra-chave e a última chave em sua própria linha, mas alinhado com a palavra-chave.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * Braces
+ */
+interface Empty {
+}
+
+enum MyEnum {
+    UNDEFINED(0) {
+	void foo() {
+	}
+    }
+}
+
+@interface SomeAnnotationType {
+}
+
+class Example {
+    SomeClass fField = new SomeClass() {
+    };
+    int[] myArray = { 1, 2, 3, 4, 5, 6 };
+    int[] emptyArray = new int[] {};
+
+    Example() {
+    }
+
+    void bar(int p) {
+	for (int i = 0; i < 10; i++) {
+	}
+	switch (p) {
+	case 0:
+	    fField.set(0);
+	    break;
+	case 1: {
+	    break;
+	}
+	default:
+	    fField.reset();
+	}
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * Braces
+ */
+interface Empty 
+{
+}
+
+enum MyEnum {
+    UNDEFINED(0) {
+	void foo() 
+	{
+	}
+    }
+}
+
+@interface SomeAnnotationType {
+}
+
+class Example {
+    SomeClass fField = new SomeClass() {
+    };
+    int[] myArray = { 1, 2, 3, 4, 5, 6 };
+    int[] emptyArray = new int[] {};
+
+    Example() {
+    }
+
+    void bar(int p) {
+	for (int i = 0; i < 10; i++) 
+	{
+	}
+	switch (p) {
+	case 0:
+	    fField.set(0);
+	    break;
+	case 1: {
+	    break;
+	}
+	default:
+	    fField.reset();
+	}
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+<!-- -->
+
+<!-- Convetion -->
+						<dl>
+							<dt>
+								Quando Chaves são Necessários
+							</dt>
+							<dd> 
+								Todas as declarações if, while e do devem ter chaves ou estar em uma única linha. Isso ajuda a garantir que alguém ao adicionar uma linha de código não esqueça de adicionar chaves.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * If...else
+ */
+class Example {
+    void bar() {
+	do {
+	} while (true);
+	try {
+	} catch (Exception e) {
+	} finally {
+	}
+    }
+
+    void foo2() {
+	if (true) { return; }
+	if (true) {
+	    return;
+	} else if (false) {
+	    return;
+	} else {
+	    return;
+	}
+    }
+
+    void foo(int state) {
+	if (true) return;
+	if (true) return;
+	else if (false) return;
+	else return;
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * If...else
+ */
+class Example {
+    void bar() {
+	do {
+	} while (true);
+	try {
+	} catch (Exception e) {
+	} finally {
+	}
+    }
+
+    void foo2() {
+	if (true) {
+	    return;
+	}
+	if (true) {
+	    return;
+	} else
+	    if (false) {
+		return;
+	    } else {
+		return;
+	    }
+    }
+
+    void foo(int state) {
+	if (true)
+	    return;
+	if (true)
+	    return;
+	else
+	    if (false)
+		return;
+	    else
+		return;
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+<!-- -->
+
+<!-- -->
+
+<!-- 2. Whitespace -->
+
+				<h2 class="page-header">
+					Espaços em branco
+				</h2>
+
+			<!-- No Tab Character -->
+						<dl>
+							<dt>
+								Sem Carácter de Tabulação
+							</dt>
+							<dd>
+								Não tenha quaisquer caracteres de tabulação em seu código fonte. É difícil ou impossível de ler o código fonte se as suas configurações de tabulação forem diferentes dos demais desenvolvedores.
+
+								A maneira mais fácil de remover a tabulação é definir em seu editor de texto que substituia o número correto de espaços para um caractere de tabulação.			
+							</dd>
+						</dl>
+<!-- -->
+
+<!-- Line Length -->
+						<dl>
+							<dt>
+								Comprimento da Linha
+							</dt>
+							<dd>
+								Limite o seu comprimento da linha a 80 caracteres, já que linhas mais longas podem causar problemas com muitos editores de texto e outras ferramentas.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * Declaration
+ */
+class Example {
+    public final synchronized java.lang.String aMethodWithALongName() {
+    }
+}
+
+/**
+ * Parameters
+ */
+class Example {
+    void foo(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+    }
+}
+
+/**
+ * 'throws' clause
+ */
+class Example {
+    int foo() throws FirstException, SecondException, ThirdException {
+	return Other.doSomething();
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * Declaration
+ */
+class Example {
+    public final synchronized java.lang.String aMethodWithALongLongLongLongName() {
+    }
+}
+
+/**
+ * Parameters
+ */
+class Example {
+    void foo(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+    
+}
+
+/**
+ * 'throws' clause
+ */
+class Example {
+    int foo() throws FirstException, SecondException, ThirdException, FourthException, FifthException {
+	return Other.doSomething();
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+<!-- -->
+
+<!-- Spacing Around Operators -->
+						<dl>
+							<dt>
+								Espaçamento ao redor de Operadores
+							</dt>
+							<dd>
+								Sempre coloque espaços antes e depois de operadores binários. Isso melhora a legibilidade de expressões.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int c = -a * b - d;
+</pre>
+
+<pre class="prettyprint">
+boolean b= i > 0 && i < 10 || i == 50;
+</pre>
+
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+int c =-a*b-d;
+</pre>
+
+<pre class="prettyprint">
+boolean b= i>0&&i<10||i==50;
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+<!-- -->
+
+<!-- Indentation -->
+						<dl>
+							<dt>
+								Recuo
+							</dt>
+							<dd>
+								Sempre utilize o recuo dentro de chaves. Use quatro (4) espaços para cada nível de recuo.
+								<div class="row row-example v">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+void func() {
+	if (something happened) {
+		if (another thing happened) {
+			while (more input) {
+			...
+			}
+		}
+	}
+}
+</pre>
+
+<pre class="prettyprint">
+class Example {
+    int[] myArray = { 1, 2, 3, 4, 5, 6 };
+    int theInt = 1;
+    String someString = "Hello";
+    double aDouble = 3.0;
+
+    void foo(int a, int b, int c, int d, int e, int f) {
+	switch (a) {
+	case 0:
+	    Other.doFoo();
+	    break;
+	default:
+	    Other.doBaz();
+	}
+    }
+
+    void bar(List v) {
+	for (int i = 0; i < 10; i++) {
+	    v.add(new Integer(i));
+	}
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+void func() {
+if (something happened) {
+	if (another thing happened) {
+	while (more input) {
+	...
+	}
+	}
+}
+}
+</pre>
+
+<pre class="prettyprint">
+class Example {
+    int[] myArray = { 1, 2, 3, 4, 5, 6 };
+    int theInt = 1;
+    String someString = "Hello";
+    double aDouble = 3.0;
+
+    void foo(int a, int b, int c, int d, int e, int f) {
+	switch (a) {
+	case 0:
+	Other.doFoo();
+	break;
+	default:
+	Other.doBaz();
+	}
+    }
+
+    void bar(List v) {
+for (int i = 0; i < 10; i++) {
+    v.add(new Integer(i));
+}
+    }
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+
+<!-- -->
+
+<!-- if-else-if-else -->
+						<dl>
+							<dt>
+								if-else-if-else
+							</dt>
+							<dd>
+								Sempre alinhe as declarações if com as chaves para a sua declaração else associada. Especificamente, coloque a chave inicial na mesma linha que a palavra-chave e a linha de fuga na mesma linha que a próxima instrução.
+								<div class="row row-example">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+if (condition) {               
+...
+} else if (condition) {    
+...
+} else {                      
+...
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+if (condition) 
+{               
+...
+} 
+else if (condition) 
+{    
+...
+} 
+else 
+{                      
+...
+}
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+
+<!-- -->
+
+<!-- 3. Additions and Exceptions to the Javadoc Standards  -->
+				<h2 class="page-header">
+					Adições ao Javadoc
+				</h2>
+
+			<!-- No Magic Numbers -->
+						<dl>
+							<dt>
+								Sem números mágicos
+							</dt>
+							<dd>
+								Um número mágico é um literal numérico que não é definido como uma constante. É mágico porque ninguém tem a menor idéia do que isso significa que depois de 3 meses, incluindo o autor. De uso generalizado, -1, 0, 1 e 2, não são considerados números mágicos.
+
+								Sempre que você atribuir um número a uma variável, use uma constante em seu lugar. Em Java, você declara constantes, que são variáveis ​​que não podem mudar, usando a palavra-chave final. Você pode usar constantes locais dentro de métodos ou membros constantes declaradas fora de qualquer método. Normalmente, você declarar constantes membro como uma variável membro public static final.
+								<div class="row">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+public static final int MY_CONSTANT = 10;
+...
+calculate(MY_CONSTANT);
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+calculate(10);
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+<!-- -->
+
+<!-- Method Length -->
+						<dl>
+							<dt>
+								Tamanho de Métodos
+							</dt>
+							<dd>
+								Os métodos devem ter não mais do que 150 linhas. Se um método torna-se muito longo, é difícil de entender. Em vez disso, você deve criar métodos menores que se concentram em tarefas individuais.
+							</dd>
+						</dl>
+
+<!-- -->
+
+<!-- Tab Character -->
+						<dl>
+							<dt>
+								Caractere de tabulação
+							</dt>
+							<dd>
+								Não possua quaisquer caracteres de tabulação em seu código fonte. É difícil ou impossível de ler o código fonte se as suas configurações de tabulação são de diferentes autores.
+							</dd>
+						</dl>
+<!-- -->
+
+
+<!-- 4. Comments -->
+				<h2 class="page-header">
+					Comentários
+				</h2>
+				<p>
+					Comentários são notas explicativas para os seres humanos lerem um programa. Com boas opções de nome, os comentários podem ser mínimos em um programa. Os únicos comentários requeridos são blocos de comentários pouco antes da declaração de classe (após as instruções de importação) e antes de cada declaração de método.
+
+					Além de blocos de comentários, uma outra vez para adicionar comentários é quando o código é incomum ou obscuro. Quando algo é importante e não óbvio, merece um comentário.
+				</p>
+
+<!-- No Magic Numbers -->
+						<dl>
+							<dt>
+								Comentários de bloco
+							</dt>
+							<dd>
+								O Javadoc é um programa que analisa as declarações e comentários da documentação do seu código para produzir um conjunto de páginas HTML. Estas páginas descrevem seu código para outros programadores. Para um exemplo da documentação produzida, consulte a documentação da API do Java.
+
+								Alguns Javadocs são derivado de blocos de comentários especialmente formatados, que você pode criar da seguinte forma:
+							</dd>
+						</dl>
+						<ul>
+							<li>
+								Recue a primeira linha para alinhar-se com o código abaixo do comentário.
+							</li>
+							<li>
+								Comece o comentário com o símbolo de começar o comentário (/**), seguido de um retorno.
+							</li>
+							<li>
+								Comece as linhas subseqüentes com um asterisco *. Recue os asteriscos com um espaço adicional para alinhar os asteriscos. Separe o asterisco do texto descritivo ou a tag que seguir.
+							</li>
+							<li>
+								Adicione uma descrição a classe ou ao método.
+							</li>
+							<li>
+								Insira uma linha de comentário em branco entre a descrição e a lista de tags, como no exemplo.
+							</li>
+							<li>
+								Insera linhas em branco adicionais para criar várias tags.
+							</li>
+							<li>
+								A última linha começa com o símbolo de final de comentário (*/) recuado para a linha de asteriscos e seguido por um retorno. Note que o símbolo de final de comentário contém apenas um único asterisco.
+<pre class="prettyprint">
+/**
+ * The main method for the HelloWorld program.
+ *
+ * @param args Not used
+ */
+</pre>
+							</li>
+							<li>
+								Para mais informações sobre tags, veja o <a href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">Javadoc</a> .
+							</li>
+						</ul>
+<!-- -->
+
+
+<!-- File Comment Block -->
+						<dl>
+							<dt>
+								Bloco de comentário de arquivo
+							</dt>
+							<dd>
+								Cada arquivo de código fonte (*.java) deve ter um bloco de comentário Javadoc, pouco antes da declaração da classe que contém o nome do autor, nome do arquivo e finalidade do arquivo. Uma ou duas linhas é geralmente suficiente para explicar o propósito.
+								<div class="row">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+import javax.swing.*;
+
+/**
+ * HelloWorld.java
+ * Purpose: Prints a message to the screen.
+ *
+ * @author Jane User
+ * @version 1.0 8/20/03
+ */
+public class HellowWorld {
+</pre>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+import javax.swing.*;
+
+/**
+ * HelloWorld.java
+ */
+public class HellowWorld {
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+<!-- -->
+
+<!-- Method Comment Block -->
+						<dl>
+							<dt>
+								Bloco de comentário de método
+							</dt>
+							<dd>
+								Cada método deve ter um bloco de comentário Javadoc antes do método.
+
+								<div class="row">
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Bom:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+/**
+ * Read a line of text from the shell console.
+ *
+ * @return A String input by the user.
+ */
+public String readLine();
+</pre>
+
+<pre class="prettyprint">
+/**
+ * The following is some sample code which illustrates source formatting
+ * within javadoc comments:
+ * 
+ * <pre>
+ * public class Example {
+ *     final int a = 1;
+ *     final boolean b = true;
+ * }
+ * </pre>
+ * 
+ * Descriptions of parameters and return values are best appended at end of
+ * the javadoc comment.
+ * 
+ * @param a
+ *            The first parameter. For an optimum result, this should be an
+ *            odd number between 0 and 100.
+ * @param b
+ *            The second parameter.
+ * @return The result of the foo operation, usually within 0 and 1000.
+ */
+int foo(int a, int b);
+</pre>
+
+											</dd>
+										</dl>
+									</div>
+									<div class="col-sm-6">
+										<dl>
+											<dt>
+												Mau:
+											</dt>
+											<dd>
+<pre class="prettyprint">
+public String readLine();
+</pre>
+
+<pre class="prettyprint">
+int foo(int a, int b);
+</pre>
+											</dd>
+										</dl>
+									</div>
+								</div>
+
+							</dd>
+						</dl>
+
+
+<!-- -->
+
+		</div>
+
+
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+
+        <div class="col-sm-2">
+        </div>
+
+		<div class="col-sm-8">
+
+			<hr>
+			<div class="footer">
+				<ul class="list-unstyled">
+				<!-- <li class="pull-right"><a href="#top">Back to top</a></li> -->
+				<li><p>&copy; 2013</p></li>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"/></script>
+	<script type="text/javascript" src="js/scripts.js"/></script>
+	<script type="text/javascript" src="js/jquery.scrollNav.min.js"></script>
+
+	<script type="text/javascript">
+		$('.main').scrollNav({
+			sections: 'h2',
+			subSections: true,
+			showHeadline: false,
+			showTopLink: true,
+			topLinkText: 'Orientações de Estilo',
+			fixedMargin: 50,
+			scrollOffset: 60,
+			animated: true,
+			speed: 500,
+			insertTarget: '#menu',
+			insertLocation: 'appendTo',
+	    	arrowKeys: false
+		});
+
+		$('.scroll-nav').show(function () {
+			$('.scroll-nav').addClass('hidden-print');
+			$('.scroll-nav').addClass('affix');
+		})
+
+		$('.scroll-nav__list').show(function () {
+			$('.scroll-nav__list').addClass('list-unstyled');
+		});
+
+		
+	</script>
+
+
+</body>
+</html>

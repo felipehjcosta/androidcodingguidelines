@@ -1,0 +1,88 @@
+@import '../variables.less';
+@import '../mixins.less';
+@import '../type.less';
+ 
+body { 
+  background-color: @gray-lighter;
+  padding-top: 40px;
+  @media screen and (max-width: 768px) {
+      body { padding-top: 0px; }
+  }
+}
+
+.navbar {
+  color: rgb(255,0,0);
+}
+
+.scroll-nav__wrapper {
+  padding: 10px 5px;
+  background-color: #D7DBDC; //rgb(44, 62, 80);
+}
+
+.scroll-nav__list {
+  padding-left: 0px;
+}
+
+.scroll-nav__item.active {
+  font-weight: bold;
+  border-right: 1px solid #563d7c;
+}
+
+.scroll-nav__item {
+  color: @gray-lighter;
+  font-size: 15px;
+  line-height: 1.4em;
+  overflow: visible;
+  width: 165px;
+}
+
+.scroll-nav__item > a {
+  color: @text-color;
+}
+
+.scroll-nav__item > a:hover, a:focus {
+  text-decoration:none;
+  background-color: @gray-lighter;
+}
+
+.scroll-nav__item.active > a:hover, a:focus {
+  text-decoration:none;
+  background-color: transparent;
+}
+
+.scroll-nav__link {
+  text-decoration:none;
+  display: block;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+#menu {
+  margin-top: 25px;
+  @media screen and (max-width: @screen-tablet) {
+    display: none;
+  }
+}
+
+
+hr {
+  border-color: @navbar-default-color;
+}
+
+.page-header {
+  margin-bottom: 42px !important;
+  border-bottom: 1px solid @navbar-default-color;
+  //padding-top: 20px;
+}
+
+dl {
+  margin-bottom: 10px !important;
+}
+
+.row-example {
+ // margin: 10px;
+}
+
+
+
+
