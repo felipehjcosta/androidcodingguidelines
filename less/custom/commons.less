@@ -1,0 +1,17 @@
+@import '../variables.less';
+@import '../mixins.less';
+@import '../type.less';
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+body {
+	background-color: @gray-lighter;
+	padding-top: 40px;
+	@media screen and (max-width: 768px) {
+	body { padding-top: 0px; }
+	}
+}
