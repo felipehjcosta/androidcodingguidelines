@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<link type="text/css" rel="stylesheet" href="css/highlighter/tomorrow-night-bright.css" />
+	<link type="text/css" rel="stylesheet" href="css/highlighter/tomorrow-night-bright_code_style.css" />
 	<link type="text/css" rel="stylesheet" href="css/bootstrap-flat.min.css" >
 	<link type="text/css" rel="stylesheet" href="css/styleguidelines.css" >
 
@@ -61,7 +61,7 @@
         <div class="col-sm-2" id="menu">
         </div>
 
-		<div class="col-sm-8 main" role="main">
+		<div class="col-sm-10 main" role="main">
 			<div class="introduction">
 				<h1>
 					<b>Orientações de Estilo</b>
@@ -69,13 +69,13 @@
 
 				<!-- <hr> -->
 				
-				<div>
+				<p>
 					A fim de manter o código consistente, utilize as seguintes convenções. De agora em diante "bom" e "mau" são usados ​​para atribuir coisas que fariam o estilo de código corresponder, ou não. Isto não é um julgamento sobre suas habilidades de codificação, porém é mais uma chamada de estilo e aparência. Por favor, tente seguir estas orientações para garantir a clareza.
-				</div>
-				
-				<div>
-					Você também pode querer ler o <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html"> Convenção de Código para Linguagem Java</a> também, no entanto, as diretrizes abaixo prevalecem para o código Java, se houver um conflito.
-				</div>
+				</p>
+			
+				<p>
+					Você pode querer ler a <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Convenção de Código para Linguagem Java</a> também.
+				</p>
 			</div>
 
 
@@ -91,12 +91,12 @@
 
 <!-- Use Meaningful Names-->
 
-						<dl>
-							<dt>
-								Utilize Nomes Significativos
-							</dt>
-							<dd>
-								Escolha nomes que sugerem o seu propósito. Bons nomes ajudam o desenvolvedor a entender o problema que você está resolvendo.
+					<!--<dl>
+							<dt>-->
+								<h4>Escolha</h4>
+
+								<p>Escolha nomes que sugerem o seu propósito. Bons nomes ajudam ao desenvolvedor a entender o problema que você está resolvendo.</p>
+
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -104,12 +104,12 @@
 												Bom:
 											</dt>
 											<dd>
-<pre class="prettyprint">
+<pre class="prettyprint lang-java">
 int count;
 </pre>
 
-<pre class="prettyprint">
-List<News> newsList;
+<pre class="prettyprint lang-java">
+List&ltNews&gt; newsList;
 </pre>
 											</dd>
 										</dl>
@@ -120,33 +120,28 @@ List<News> newsList;
 												Mau:
 											</dt>
 											<dd>
-<pre class="prettyprint">
+<pre class="prettyprint lang-java">
 int a;
 </pre>
 
-<pre class="prettyprint">
-List<News> someList;
+<pre class="prettyprint lang-java">
+List&ltNews&gt; someList;
 </pre>
 											</dd>
 										</dl>
 									</div>
-								</div>
-							</dd>
-						</dl>
-
-<!-- -->
-
-					<!-- </li>
-					<li> -->
-			
+								</div>			
 <!-- Variable Names-->
 
-						<dl>
-							<dt>
-								Nome de Variáveis
-							</dt>
-							<dd>
-								Comece com uma letra minúscula e use letras maiúsculas como separador. Não utilizar underscore ('_').
+						<!--<dl>
+							<dt>-->
+
+							<h4>Variáveis</h4>
+
+							<!--</dt>
+							<dd>-->
+								<p>Comece com uma letra minúscula e use letras maiúsculas como separador. Não utilize underscore ('_').</p>
+
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -199,12 +194,12 @@ String some_string = "Hello";
 
 <!-- Constant Names-->
 
-						<dl>
-							<dt>
-								Nome de Constantes
-							</dt>
-							<dd>
-								Use todas as letras maiúsculas e utilize underscore ('_') como separador.
+						<!--<dl>
+							<dt>-->
+							<h4>Constantes</h4>
+							<!--</dt>
+							<dd>-->
+								<p>Use todas as letras maiúsculas e utilize underscore ('_') como separador.</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -242,12 +237,12 @@ final int myConst = 1;
 
 <!-- Method Names -->
 
-						<dl>
-							<dt>
-								Nom de Métodos
-							</dt>
-							<dd>
-								Comece com uma letra minúscula e use letras maiúsculas como separador. Não utilize underscore ('_').
+						<!-- <dl>
+							<dt> -->
+								<h4>Métodos</h4>
+							<!-- </dt>
+							<dd> -->
+								<p>Comece com uma letra minúscula e use letras maiúsculas como separador. Não utilize underscore ('_').</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -292,12 +287,12 @@ void foo_and_bar();
 
 <!-- Class Names -->
 
-						<dl>
-							<dt>
-								Nome de Classes
-							</dt>
-							<dd>
-								Comece com uma letra maiúscula e utileze letras maiúsculas como separador. Não utilize underscore ('_').
+						<!--<dl>
+							<dt>-->
+								<h4>Classes</h4>
+							<!--</dt>
+							<dd>-->
+								<p>Comece com uma letra maiúscula e utileze letras maiúsculas como separador. Não utilize underscore ('_').</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -349,12 +344,11 @@ class example_
 				</h2>
 
 <!-- Convetion -->
-						<dl>
-							<dt>
-								Convenção
-							</dt>
-							<dd>
+				
+							<h4>Convenção</h4>
+							<p>
 								Uma questão fervoroso de grande debate nos círculos de programação é a colocação de chaves. O estilo Java é colocar a chave inicial na mesma linha que a palavra-chave e a última chave em sua própria linha, mas alinhado com a palavra-chave.
+							</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -468,12 +462,12 @@ class Example {
 <!-- -->
 
 <!-- Convetion -->
-						<dl>
-							<dt>
-								Quando Chaves são Necessários
-							</dt>
-							<dd> 
+						<h4>
+							Necessidade
+						</h4>
+						<p>
 								Todas as declarações if, while e do devem ter chaves ou estar em uma única linha. Isso ajuda a garantir que alguém ao adicionar uma linha de código não esqueça de adicionar chaves.
+						</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -582,25 +576,23 @@ class Example {
 				</h2>
 
 			<!-- No Tab Character -->
-						<dl>
-							<dt>
-								Sem Carácter de Tabulação
-							</dt>
-							<dd>
+						<h4>
+							Sem Caractere
+						</h4>
+						<p>
 								Não tenha quaisquer caracteres de tabulação em seu código fonte. É difícil ou impossível de ler o código fonte se as suas configurações de tabulação forem diferentes dos demais desenvolvedores.
 
 								A maneira mais fácil de remover a tabulação é definir em seu editor de texto que substituia o número correto de espaços para um caractere de tabulação.			
-							</dd>
-						</dl>
+						</p>
 <!-- -->
 
 <!-- Line Length -->
-						<dl>
-							<dt>
-								Comprimento da Linha
-							</dt>
-							<dd>
+						<h4>
+							Comprimento da Linha
+						</h4>
+						<p>
 								Limite o seu comprimento da linha a 80 caracteres, já que linhas mais longas podem causar problemas com muitos editores de texto e outras ferramentas.
+						</P>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -679,12 +671,12 @@ class Example {
 <!-- -->
 
 <!-- Spacing Around Operators -->
-						<dl>
-							<dt>
-								Espaçamento ao redor de Operadores
-							</dt>
-							<dd>
+						<h4>
+							Espaçamento ao redor de Operadores
+						</h4>
+						<p>
 								Sempre coloque espaços antes e depois de operadores binários. Isso melhora a legibilidade de expressões.
+							</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -726,12 +718,12 @@ boolean b= i>0&&i<10||i==50;
 <!-- -->
 
 <!-- Indentation -->
-						<dl>
-							<dt>
+						<h4>
 								Recuo
-							</dt>
-							<dd>
+						</h4>
+						<p>
 								Sempre utilize o recuo dentro de chaves. Use quatro (4) espaços para cada nível de recuo.
+						</p>
 								<div class="row row-example v">
 									<div class="col-sm-6">
 										<dl>
@@ -831,12 +823,12 @@ for (int i = 0; i < 10; i++) {
 <!-- -->
 
 <!-- if-else-if-else -->
-						<dl>
-							<dt>
+						<h4>
 								if-else-if-else
-							</dt>
-							<dd>
+						</h4>
+							<p>
 								Sempre alinhe as declarações if com as chaves para a sua declaração else associada. Especificamente, coloque a chave inicial na mesma linha que a palavra-chave e a linha de fuga na mesma linha que a próxima instrução.
+							</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
 										<dl>
@@ -892,14 +884,14 @@ else
 				</h2>
 
 			<!-- No Magic Numbers -->
-						<dl>
-							<dt>
+						<h4>
 								Sem números mágicos
-							</dt>
-							<dd>
+						</h4>
+						<p>
 								Um número mágico é um literal numérico que não é definido como uma constante. É mágico porque ninguém tem a menor idéia do que isso significa que depois de 3 meses, incluindo o autor. De uso generalizado, -1, 0, 1 e 2, não são considerados números mágicos.
 
 								Sempre que você atribuir um número a uma variável, use uma constante em seu lugar. Em Java, você declara constantes, que são variáveis ​​que não podem mudar, usando a palavra-chave final. Você pode usar constantes locais dentro de métodos ou membros constantes declaradas fora de qualquer método. Normalmente, você declarar constantes membro como uma variável membro public static final.
+						</p>
 								<div class="row">
 									<div class="col-sm-6">
 										<dl>
@@ -934,26 +926,22 @@ calculate(10);
 <!-- -->
 
 <!-- Method Length -->
-						<dl>
-							<dt>
-								Tamanho de Métodos
-							</dt>
-							<dd>
+						<h4>
+							Tamanho de Métodos
+						</h4>
+						<p>
 								Os métodos devem ter não mais do que 150 linhas. Se um método torna-se muito longo, é difícil de entender. Em vez disso, você deve criar métodos menores que se concentram em tarefas individuais.
-							</dd>
-						</dl>
+						</p>
 
 <!-- -->
 
 <!-- Tab Character -->
-						<dl>
-							<dt>
-								Caractere de tabulação
-							</dt>
-							<dd>
+						<h4>
+							Tabulação
+						</h4>
+						<p>
 								Não possua quaisquer caracteres de tabulação em seu código fonte. É difícil ou impossível de ler o código fonte se as suas configurações de tabulação são de diferentes autores.
-							</dd>
-						</dl>
+						</p>
 <!-- -->
 
 
@@ -968,16 +956,14 @@ calculate(10);
 				</p>
 
 <!-- No Magic Numbers -->
-						<dl>
-							<dt>
-								Comentários de bloco
-							</dt>
-							<dd>
-								O Javadoc é um programa que analisa as declarações e comentários da documentação do seu código para produzir um conjunto de páginas HTML. Estas páginas descrevem seu código para outros programadores. Para um exemplo da documentação produzida, consulte a documentação da API do Java.
+						<h4>
+							Bloco
+						</h4>
+						<p>
+							O Javadoc é um programa que analisa as declarações e comentários da documentação do seu código para produzir um conjunto de páginas HTML. Estas páginas descrevem seu código para outros programadores. Para um exemplo da documentação produzida, consulte a documentação da API do Java.
 
-								Alguns Javadocs são derivado de blocos de comentários especialmente formatados, que você pode criar da seguinte forma:
-							</dd>
-						</dl>
+							Alguns Javadocs são derivado de blocos de comentários especialmente formatados, que você pode criar da seguinte forma:
+						</p>
 						<ul>
 							<li>
 								Recue a primeira linha para alinhar-se com o código abaixo do comentário.
@@ -1015,12 +1001,12 @@ calculate(10);
 
 
 <!-- File Comment Block -->
-						<dl>
-							<dt>
-								Bloco de comentário de arquivo
-							</dt>
-							<dd>
-								Cada arquivo de código fonte (*.java) deve ter um bloco de comentário Javadoc, pouco antes da declaração da classe que contém o nome do autor, nome do arquivo e finalidade do arquivo. Uma ou duas linhas é geralmente suficiente para explicar o propósito.
+						<h4>
+							Arquivo
+						</h4>
+						<p>
+							Cada arquivo de código fonte (*.java) deve ter um bloco de comentário Javadoc, pouco antes da declaração da classe que contém o nome do autor, nome do arquivo e finalidade do arquivo. Uma ou duas linhas é geralmente suficiente para explicar o propósito.
+						</p>
 								<div class="row">
 									<div class="col-sm-6">
 										<dl>
@@ -1067,13 +1053,12 @@ public class HellowWorld {
 <!-- -->
 
 <!-- Method Comment Block -->
-						<dl>
-							<dt>
-								Bloco de comentário de método
-							</dt>
-							<dd>
-								Cada método deve ter um bloco de comentário Javadoc antes do método.
-
+						<h4>
+							Método
+						</h4>
+						<p>
+							Cada método deve ter um bloco de comentário Javadoc antes do método.
+						</p>
 								<div class="row">
 									<div class="col-sm-6">
 										<dl>
@@ -1148,6 +1133,7 @@ int foo(int a, int b);
 	</div>
 </div>
 
+<!--
 <div class="container">
 	<div class="row">
 
@@ -1156,7 +1142,7 @@ int foo(int a, int b);
 			<hr>
 			<div class="footer">
 				<ul class="list-unstyled">
-				<!-- <li class="pull-right"><a href="#top">Back to top</a></li> -->
+				<!-- <li class="pull-right"><a href="#top">Back to top</a></li>
 				<li><p>&copy; 2013</p></li>
 			</div>
 
@@ -1164,6 +1150,7 @@ int foo(int a, int b);
 	</div>
 
 </div>
+-->
 
 
 
@@ -1175,8 +1162,8 @@ int foo(int a, int b);
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"/></script>
-	<script type="text/javascript" src="js/jquery.scrollNav.min.js"></script>
-
+	<script type="text/javascript" src="js/highlighter/prettify.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollNav.js"></script>
 	<script type="text/javascript">
 		$(function() {
 	 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -1188,11 +1175,21 @@ int foo(int a, int b);
 			  )
 			  document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
 			}
+
+
+			$('.nav a').on('click', function(){ 
+		        if($('.navbar-toggle').css('display') !='none'){
+		            $(".navbar-toggle").trigger( "click" );
+		        }
+		    });
+
+
+		    prettyPrint();
 		});
 
 		$('.main').scrollNav({
 			sections: 'h2',
-			subSections: true,
+			subSections: 'h4',
 			showHeadline: false,
 			showTopLink: true,
 			topLinkText: 'Orientações de Estilo',
@@ -1212,14 +1209,7 @@ int foo(int a, int b);
 
 		$('.scroll-nav__list').show(function () {
 			$('.scroll-nav__list').addClass('list-unstyled');
-		});
-
-		$(function() {
-		    $('.nav a').on('click', function(){ 
-		        if($('.navbar-toggle').css('display') !='none'){
-		            $(".navbar-toggle").trigger( "click" );
-		        }
-		    });
+			$('.scroll-nav__sub-list').addClass('list-unstyled');
 		});
 
 		

@@ -1,7 +1,7 @@
 @import 'commons.less';
 
-.navbar {
-  color: rgb(255,0,0);
+p {
+  margin: 0px;
 }
 
 .scroll-nav__wrapper {
@@ -40,11 +40,31 @@
   background-color: transparent;
 }
 
+.scroll-nav__sub-item {
+  color: @gray-lighter;
+  font-size: 14px;
+  line-height: 1.4em;
+  overflow: visible;
+}
+
+.scroll-nav__sub-item > a {
+  color: @text-color;
+}
+
+.scroll-nav__sub-item > a:hover, a:focus {
+  text-decoration:none;
+  background-color: transparent;
+}
+
 .scroll-nav__link {
   text-decoration:none;
   display: block;
   margin: 0 auto;
   padding-left: 10px;
+}
+
+.scroll-nav__sub-list {
+  padding-left: 20px;
 }
 
 #menu {
@@ -60,7 +80,7 @@ hr {
 }
 
 .page-header {
-  margin-bottom: 42px !important;
+  //margin-bottom: 42px !important;
   border-bottom: 1px solid @navbar-default-color;
   //padding-top: 20px;
 }

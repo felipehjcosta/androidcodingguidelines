@@ -2,6 +2,7 @@
 @import '../mixins.less';
 @import '../type.less';
 
+
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
 @-ms-viewport       { width: device-width; }
@@ -12,6 +13,22 @@ body {
 	background-color: @gray-lighter;
 	padding-top: 40px;
 	@media screen and (max-width: 768px) {
-	body { padding-top: 0px; }
+		padding-top: 40px;
 	}
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: @gray-lighter;
+}
+
+.navbar-default .navbar-brand {
+    color: @gray-lighter;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: bold;
 }
