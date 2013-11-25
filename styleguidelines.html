@@ -470,7 +470,7 @@ class Example {
 							Declarações
 						</h4>
 						<p>
-								Todas as declarações if, switch, for, while e do-while devem ter chaves ou estar em uma única linha. Isso ajuda a garantir que alguém ao adicionar uma linha de código não esqueça de adicionar chaves.
+								Todas as declarações if, switch, for, while e do-while devem ter chaves. Isso ajuda a garantir que alguém ao adicionar uma linha de código não esqueça de adicionar chaves.
 						</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
@@ -509,15 +509,19 @@ class Example {
     }
 
     void foo(int state) {
-        if (true)
+        if (true){
             return;
-        if (true)
+        }
+
+        if (true) {
             return;
-        else
-            if (false)
+        } else {
+            if (false) {
                 return;
-            else
+            } else {
                 return;
+            }
+        }
     }
 }
 </pre>
@@ -935,7 +939,7 @@ calculate(10);
 							Tamanho de Métodos
 						</h4>
 						<p>
-							Os métodos devem ter não mais do que 150 linhas. Se um método torna-se muito longo, é difícil de entender e de testar. Em vez disso, você deve criar métodos menores que se concentram em tarefas individuais e fáceis de testar.
+							Os métodos devem ter não mais do que 50 linhas. Se um método torna-se muito longo, é difícil de entender e de testar. Em vez disso, você deve criar métodos menores que se concentram em tarefas individuais e fáceis de testar.
 						</p>
 <!-- -->
 
