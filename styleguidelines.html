@@ -16,11 +16,11 @@
 	<![endif]-->
 
 	<!-- icons -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+<!-- 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="shortcut icon" href="img/favicon.png"> -->
   
 </head>
 
@@ -467,10 +467,10 @@ class Example {
 
 <!-- Convetion -->
 						<h4>
-							Necessidade
+							Declarações
 						</h4>
 						<p>
-								Todas as declarações if, while e do devem ter chaves ou estar em uma única linha. Isso ajuda a garantir que alguém ao adicionar uma linha de código não esqueça de adicionar chaves.
+								Todas as declarações if, switch, for, while e do-while devem ter chaves ou estar em uma única linha. Isso ajuda a garantir que alguém ao adicionar uma linha de código não esqueça de adicionar chaves.
 						</p>
 								<div class="row row-example">
 									<div class="col-sm-6">
@@ -485,38 +485,39 @@ class Example {
  */
 class Example {
     void bar() {
-	do {
-	} while (true);
-	try {
-	} catch (Exception e) {
-	} finally {
-	}
+        do {
+        } while (true);
+
+        try {
+        } catch (Exception e) {
+        } finally {
+        }
     }
 
     void foo2() {
-	if (true) {
-	    return;
-	}
-	if (true) {
-	    return;
-	} else
-	    if (false) {
-		return;
-	    } else {
-		return;
-	    }
+        if (true) {
+            return;
+        }
+
+        if (true) {
+            return;
+        } else if (false) {
+            return;
+        } else {
+            return;
+        }
     }
 
     void foo(int state) {
-	if (true)
-	    return;
-	if (true)
-	    return;
-	else
-	    if (false)
-		return;
-	    else
-		return;
+        if (true)
+            return;
+        if (true)
+            return;
+        else
+            if (false)
+                return;
+            else
+                return;
     }
 }
 </pre>
@@ -626,7 +627,7 @@ class Example {
  */
 class Example {
     int foo() throws FirstException, SecondException, ThirdException {
-	return Other.doSomething();
+        return Other.doSomething();
     }
 }
 </pre>
@@ -934,11 +935,9 @@ calculate(10);
 							Tamanho de Métodos
 						</h4>
 						<p>
-								Os métodos devem ter não mais do que 150 linhas. Se um método torna-se muito longo, é difícil de entender. Em vez disso, você deve criar métodos menores que se concentram em tarefas individuais.
+							Os métodos devem ter não mais do que 150 linhas. Se um método torna-se muito longo, é difícil de entender e de testar. Em vez disso, você deve criar métodos menores que se concentram em tarefas individuais e fáceis de testar.
 						</p>
-
 <!-- -->
-
 
 <!-- 4. Comments -->
 				<h2 class="page-header">
@@ -947,7 +946,7 @@ calculate(10);
 				<p>
 					Comentários são notas explicativas para os seres humanos lerem um programa. Com boas opções de nome, os comentários podem ser mínimos em um programa. Os únicos comentários requeridos são blocos de comentários pouco antes da declaração de classe (após as instruções de importação) e antes de cada declaração de método.
 
-					Além de blocos de comentários, uma outra vez para adicionar comentários é quando o código é incomum ou obscuro. Quando algo é importante e não óbvio, merece um comentário.
+					Além de blocos de comentários, uma outra oportunidade para adicionar comentários é quando o código é incomum ou obscuro. Quando algo é importante e não óbvio, merece um comentário.
 				</p>
 
 <!-- No Magic Numbers -->
