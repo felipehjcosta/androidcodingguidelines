@@ -70,11 +70,11 @@
 				<!-- <hr> -->
 				
 				<p>
-					A fim de manter o código consistente, utilize as seguintes convenções. De agora em diante "bom" e "mau" são usados ​​para atribuir coisas que fariam o estilo de código corresponder, ou não. Isto não é um julgamento sobre suas habilidades de codificação, porém é mais uma chamada de estilo e aparência. Por favor, tente seguir estas orientações para garantir a clareza.
+					A fim de manter o código consistente, utilize as seguintes convenções. De agora em diante, "bom" e "mau" são usados ​​para atribuir coisas que fariam o estilo de código corresponder, ou não. Isto não é um julgamento sobre suas habilidades de codificação, porém é mais uma direção em relação ao estilo e aparência. Por favor, tente seguir estas orientações para garantir a clareza.
 				</p>
 			
 				<p>
-					Você pode querer ler a <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Convenção de Código para Linguagem Java</a> também.
+					Você pode querer ler a <a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Convenção de Código para Linguagem Java</a> também, na qual é baseado esse Code Style.
 				</p>
 			</div>
 
@@ -85,6 +85,10 @@
 			    <h2 class="page-header">
 			    	Nomes
 			    </h2>
+
+			   	<p>
+					Todos os nomes devem seguir o padrão <a href="http://en.wikipedia.org/wiki/CamelCase">Camel Case</a> no caso de código Java e ser escritas em lingua inglesa.
+				</p>
 				
 			<!-- 	<ol>
 					<li> -->
@@ -490,21 +494,29 @@ class Example {
     }
 
     void foo2() {
-	if (true) { return; }
 	if (true) {
 	    return;
-	} else if (false) {
-	    return;
-	} else {
-	    return;
 	}
+	if (true) {
+	    return;
+	} else
+	    if (false) {
+		return;
+	    } else {
+		return;
+	    }
     }
 
     void foo(int state) {
-	if (true) return;
-	if (true) return;
-	else if (false) return;
-	else return;
+	if (true)
+	    return;
+	if (true)
+	    return;
+	else
+	    if (false)
+		return;
+	    else
+		return;
     }
 }
 </pre>
@@ -532,29 +544,21 @@ class Example {
     }
 
     void foo2() {
+	if (true) { return; }
 	if (true) {
+	    return;
+	} else if (false) {
+	    return;
+	} else {
 	    return;
 	}
-	if (true) {
-	    return;
-	} else
-	    if (false) {
-		return;
-	    } else {
-		return;
-	    }
     }
 
     void foo(int state) {
-	if (true)
-	    return;
-	if (true)
-	    return;
-	else
-	    if (false)
-		return;
-	    else
-		return;
+	if (true) return;
+	if (true) return;
+	else if (false) return;
+	else return;
     }
 }
 </pre>
@@ -672,7 +676,7 @@ class Example {
 
 <!-- Spacing Around Operators -->
 						<h4>
-							Espaçamento ao redor de Operadores
+							Operadores
 						</h4>
 						<p>
 								Sempre coloque espaços antes e depois de operadores binários. Isso melhora a legibilidade de expressões.
@@ -689,7 +693,7 @@ int c = -a * b - d;
 </pre>
 
 <pre class="prettyprint">
-boolean b= i > 0 && i < 10 || i == 50;
+boolean b = i > 0 && i < 10 || i == 50;
 </pre>
 
 											</dd>
@@ -719,10 +723,10 @@ boolean b= i>0&&i<10||i==50;
 
 <!-- Indentation -->
 						<h4>
-								Recuo
+							Recuo
 						</h4>
 						<p>
-								Sempre utilize o recuo dentro de chaves. Use quatro (4) espaços para cada nível de recuo.
+							Sempre utilize o recuo dentro de chaves. Use quatro (4) espaços para cada nível de recuo.
 						</p>
 								<div class="row row-example v">
 									<div class="col-sm-6">
@@ -733,13 +737,13 @@ boolean b= i>0&&i<10||i==50;
 											<dd>
 <pre class="prettyprint">
 void func() {
-	if (something happened) {
-		if (another thing happened) {
-			while (more input) {
-			...
-			}
-		}
-	}
+    if (something happened) {
+        if (another thing happened) {
+            while (more input) {
+                ...
+            }
+        }
+    }
 }
 </pre>
 
@@ -750,20 +754,20 @@ class Example {
     String someString = "Hello";
     double aDouble = 3.0;
 
-    void foo(int a, int b, int c, int d, int e, int f) {
-	switch (a) {
-	case 0:
-	    Other.doFoo();
-	    break;
-	default:
-	    Other.doBaz();
-	}
+    void foo(int a, int b, int c, int d) {
+        switch (a) {
+        case 0:
+           Other.doFoo();
+           break;
+        default:
+           Other.doBaz();
+        }
     }
 
     void bar(List v) {
-	for (int i = 0; i < 10; i++) {
-	    v.add(new Integer(i));
-	}
+        for (int i = 0; i < 10; i++) {
+            v.add(new Integer(i));
+        }
     }
 }
 </pre>
@@ -795,7 +799,7 @@ class Example {
     String someString = "Hello";
     double aDouble = 3.0;
 
-    void foo(int a, int b, int c, int d, int e, int f) {
+    void foo(int a, int b, int c, int d) {
 	switch (a) {
 	case 0:
 	Other.doFoo();
@@ -935,15 +939,6 @@ calculate(10);
 
 <!-- -->
 
-<!-- Tab Character -->
-						<h4>
-							Tabulação
-						</h4>
-						<p>
-								Não possua quaisquer caracteres de tabulação em seu código fonte. É difícil ou impossível de ler o código fonte se as suas configurações de tabulação são de diferentes autores.
-						</p>
-<!-- -->
-
 
 <!-- 4. Comments -->
 				<h2 class="page-header">
@@ -1005,7 +1000,7 @@ calculate(10);
 							Arquivo
 						</h4>
 						<p>
-							Cada arquivo de código fonte (*.java) deve ter um bloco de comentário Javadoc, pouco antes da declaração da classe que contém o nome do autor, nome do arquivo e finalidade do arquivo. Uma ou duas linhas é geralmente suficiente para explicar o propósito.
+							Cada arquivo de código fonte (*.java) deve ter um bloco de comentário Javadoc, pouco antes da declaração da classe que contém o nome do arquivo e finalidade do arquivo. Uma ou duas linhas é geralmente suficiente para explicar o propósito.
 						</p>
 								<div class="row">
 									<div class="col-sm-6">
@@ -1021,8 +1016,6 @@ import javax.swing.*;
  * HelloWorld.java
  * Purpose: Prints a message to the screen.
  *
- * @author Jane User
- * @version 1.0 8/20/03
  */
 public class HellowWorld {
 </pre>
@@ -1038,9 +1031,6 @@ public class HellowWorld {
 <pre class="prettyprint">
 import javax.swing.*;
 
-/**
- * HelloWorld.java
- */
 public class HellowWorld {
 </pre>
 											</dd>
